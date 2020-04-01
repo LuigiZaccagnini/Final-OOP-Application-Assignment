@@ -20,21 +20,6 @@ using namespace std;
 using namespace sdds;
 void  MotorcycleTest(Vehicle*);
 void  CarTest(Vehicle*);
-
-
-void* operator new(size_t size)
-{
-	cout << "Allocating Mem " << size << endl;
-	return malloc(size);
-}
-
-void operator delete(void* memory)
-{
-	cout << "Free memory: " << memory << endl;
-	free(memory);
-}
-
-
 int main() {
    cout << "Milestone 5, Car and Motorcycle: " << endl;
    CarTest(new Car);
